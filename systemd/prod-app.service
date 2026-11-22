@@ -1,0 +1,11 @@
+[Unit]
+Description=Aplicacion python 9000
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/prod-app
+ExecStart=/usr/bin/python3 -m http.server 9000 --bind 127.0.0.1
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
